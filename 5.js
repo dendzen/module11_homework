@@ -1,0 +1,1 @@
+const sum = (x, n) => Math.pow(x, n);
