@@ -1,10 +1,9 @@
-function simpleNum(){
-    const num = arguments[0]
+function simpleNum(num){
     if (num === 0 || num === 1) {
         return "не простое";
     }else if (num <= 1000) {
 
-        for (var i = 2; i < num; i++)
+        for (let i = 2; i < num; i++)
             if (num % i === 0) return "составное";
         return "простое";
 
@@ -14,3 +13,5 @@ function simpleNum(){
 }
 
 console.log(simpleNum(1000))
+
+// Всё верно, но в данном случае нет необходимости использовать arguments, т.к. в этой функции точно известно, сколько будет аргументов и каких. Лучше использовать обычный параметр функции
